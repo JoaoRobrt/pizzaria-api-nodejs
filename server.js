@@ -6,14 +6,11 @@ const authRoutes = require('./src/routes/authRoutes');
 
 dotenv.config();
 
-console.log("connectDB =", connectDB)
-
 connectDB()
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-console.log("AUTH ROUTES ===", authRoutes)
 app.use(cors()); 
 
 app.use(express.json()); 
